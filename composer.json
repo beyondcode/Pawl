@@ -1,25 +1,39 @@
 {
-    "name": "ratchet/pawl"
-  , "description": "Asynchronous WebSocket client"
-  , "keywords": ["WebSocket", "client", "Ratchet", "async", "websocket client"]
-  , "license": "MIT"
-  , "autoload": {
-        "psr-4": {
-            "Ratchet\\Client\\": "src"
-        }
-      , "files": ["src/functions_include.php"]
+  "name": "ratchet/pawl",
+  "description": "Asynchronous WebSocket client",
+  "keywords": [
+    "WebSocket",
+    "client",
+    "Ratchet",
+    "async",
+    "websocket client"
+  ],
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Ratchet\\Client\\": "src"
+    },
+    "files": [
+      "src/functions_include.php"
+    ]
+  },
+  "require": {
+    "php": "^7.1 || ^8.0",
+    "evenement/evenement": "^3.0 || ^2.0",
+    "guzzlehttp/psr7": "^2.0 || ^1.7",
+    "ratchet/rfc6455": "dev-master",
+    "react/socket": "^1.9"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.3 || ^5.7 || ^4.8"
+  },
+  "suggest": {
+    "reactivex/rxphp": "~2.0"
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/mechelon/RFC6455"
     }
-  , "require": {
-        "php": ">=5.4"
-      , "evenement/evenement": "^3.0 || ^2.0"
-      , "guzzlehttp/psr7": "^2.0 || ^1.7"
-      , "ratchet/rfc6455": "^0.3.1"
-      , "react/socket": "^1.9"
-    }
-  , "require-dev": {
-        "phpunit/phpunit": "^9.3 || ^5.7 || ^4.8"
-    }
-  , "suggest": {
-        "reactivex/rxphp": "~2.0"
-    }
+  ]
 }
